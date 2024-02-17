@@ -1,0 +1,49 @@
+:root{
+  --mdc-theme-primary: #d3d3d3;
+  --mdc-theme-on-primary: #000000;
+}
+
+#menu {
+  display: none;
+}
+
+footer {
+  background-color: var(--mdc-theme-primary);
+  color: var(--mdc-theme-on-primary);
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#copyright{
+  margin: 20px; 
+  font-size: 15px;
+}
+
+.footer--fixed-adjust {
+  padding-bottom: 64px;
+  min-height: calc(100vh - 64px - 56px);
+}
+
+@media (max-width: 800px) {
+  #menu {
+      display: initial;
+  }
+
+  #navLinks, 
+  #loginIcon {
+      display: none;
+  }
+
+  footer {
+      position: static;
+  }
+
+  .footer--fixed-adjust {
+      padding-bottom: 0px;
+  }
+}

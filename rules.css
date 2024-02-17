@@ -1,0 +1,41 @@
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#hero-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    filter: blur(5px);
+    z-index: -1;
+}
+#body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00000093;
+    color: var(--white);
+    padding: 20px;
+    max-width: 50%; 
+    font: optional;
+}
+#rules {
+    color: red;
+}
+
+h1 {
+    font-family: 'Chalkduster', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: 'PT Serif', serif;
+    font-size: 1.5em;
+    margin: 40px;
+}
