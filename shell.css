@@ -3,20 +3,35 @@
   --mdc-theme-on-primary: #000000;
 }
 
+header {
+  padding: 10px;
+}
+
+.center { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-width {
+  width: 200px;
+}
+
+
 #menu {
   display: none;
 }
 
 footer {
-  background-color: var(--mdc-theme-primary);
-  color: var(--mdc-theme-on-primary);
   position: fixed;
   bottom: 0px;
   width: 100vw;
+  background-color: var(--mdc-theme-primary);
+  color: var(--mdc-theme-on-primary);
   height: 64px;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 #copyright{
