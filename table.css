@@ -125,3 +125,8 @@ ol > li:hover::after {
     box-sizing: border-box;
     width: 100%;
   }
+  
+  .hidden {
+    display: none;
+  }
+
