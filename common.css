@@ -1,5 +1,15 @@
+:root {
+  --primary-color: #d3d3d3;
+  --dark-grey: #a9a9a9;
+  --dark-red: #8b0000;
+  --white: #f5f5f5;
+  --gold: #ffd700;
+  --black: #000000;
+}
+
+
 header {
-  background-color: rgb(211, 211, 211);
+  background-color: var(--primary-color);
   position: fixed;
   top: 0px;
   width: 100vw;
@@ -23,19 +33,44 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   width: 40%;
   justify-content: space-around;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.1em;
 }
 
 nav ul li {
   display: inline;
   margin-right: 80px; 
+}
+
+a {
+  text-shadow: #FC0 5px 0 10px;
+  font-size: 1.1em;
+  color: var(--black);
+  transition: color 0.5s;
+  transform: 0.5s;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1919ff;
+}
+a:hover {
+  color: var(--dark-red);
+  text-decoration: underline;
+}
+a:focus{
+  color: var(--dark-red);
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff0000;
 }
 
 #account {
@@ -44,7 +79,7 @@ nav ul li {
   right: 0px;
   height: 100px;
   width: 200px;
-  background-color: lightgrey;
+  background-color: var(--primary-color);
 }
 
 #login {
@@ -54,12 +89,12 @@ nav ul li {
 }  
 
 main {
-  padding: 100px 0px 81px;
+  padding: 100px 0px 0px;
 }
 
 footer {
-  background-color: lightgrey;
-  position: fixed;
+  background-color: var(--primary-color);
+  position: unset;
   bottom: 0px;
   width: 100vw;
   height: 80px;
@@ -71,30 +106,22 @@ footer {
 #copyright {
   margin: 20px;
   color: black;
-  font-size: 10px;
 }
 
 @media (min-width: 801px){
-    .mobileFeature {
-        display: none;
-    }
+  .mobileFeature {
+      display: none;
+  }
 }
 
 @media (max-width: 800px) {
-    .disappearing, #account { /*Change it to nav or ask about it*/
-        display: none; 
-    }
-    .mobileFeature {
-        grid-column: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    footer {
-        position: unset;
-    }
-    main {
-        padding-bottom: 0px;
-    }
+  .disappearing, #account {
+      display: none; 
+  }
+  .mobileFeature {
+      grid-column: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 }
-
