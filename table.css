@@ -75,12 +75,12 @@ ol > li:hover::after {
     margin-left: 15px; 
 } */
 .mdc-top-app-bar--fixed-adjust {
-  padding-top: 100px;
+    padding-top: 100px;
 }
 
 .standard-margin {
-  margin: 10px;
-}
+    margin: 10px;
+  }
 .ampler-padding {
     padding: 24px;
   }
@@ -116,3 +116,12 @@ ol > li:hover::after {
     font-family: 'Times New Roman', serif;
     font-size: 20px;
 }
+
+.space-evenly {
+    justify-content: space-evenly;
+  }
+
+.take-width {
+    box-sizing: border-box;
+    width: 100%;
+  }

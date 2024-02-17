@@ -1,48 +1,60 @@
+.mdc-top-app-bar {
+    z-index: 20;
+}
+.mdc-top-app-bar--fixed-adjust {
+    padding-top: 100px;
+}
+
+.standard-margin {
+    margin: 10px;
+  }
+.ampler-padding {
+    padding: 24px;
+  }
 
 #hero{
-  width:100%;
-  height: 80vh; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  position: relative;
+    width:100%;
+    height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
 }
 
 #hero-image{
-  width:100vw;
-  height: 80vh;
-  filter: blur(3px);
-  position: absolute;
+    width:100vw;
+    height: 80vh;
+    filter: blur(3px);
+    position: absolute;
 }
 
 
-#welcomMessage {
-  position: absolute;
-  color: transparent;
-  text-align: center;
-  font-size: 3.5em;
-  z-index: 10;
-  display: flex;
-  -webkit-text-stroke: 0.09vw darkgray;
-  text-transform: uppercase;
-  font-family: 'Impact', fantasy;
-  font-weight: 900;
-  font-size: 40px;
-  margin: 20px;
+#welcomeMessage {
+    position: absolute;
+    color: transparent;
+    text-align: center;
+    font-size: 3.5em;
+    z-index: 10;
+    display: flex;
+    -webkit-text-stroke: 0.09vw var(--dark-grey);
+    text-transform: uppercase;
+    font-family: 'Impact', fantasy;
+    font-weight: 900;
+    margin: 20px;
 }
 
 
-#welcomMessage::before {
+#welcomeMessage::before {
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000%;
+    width: 100%;
     height: 100%;
-    color: darkgrey;
+    color: var(--dark-grey);
     -webkit-text-stroke: 0vw rgb(112, 228, 112);
-    border-right: 3px solid yellow;
+    border-right: 3px solid var(--gold);
     overflow: hidden;
     animation: animate 10s linear infinite; 
     white-space: nowrap;
@@ -136,7 +148,7 @@ p {
 #quoteSection {
     width: 100%vw;         
     height: 200px;    
-    background-color: darkgrey;  
+    background-color: var(--dark-grey);  
     text-align: center;
     margin: 20px auto;       
     display: flex;           
@@ -155,7 +167,7 @@ blockquote{
 #whatPeopleSay{
     width: 100%vw;         
     height: 400px;    
-    background-color: darkgrey;  
+    background-color: var(--dark-grey);  
     text-align: center;
     margin: 20px auto;       
     display: flex;              
@@ -167,13 +179,32 @@ blockquote{
     font-family: 'Times New Roman', serif;
 }
 
+.startButton {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    background-color: var(--white);
+    color: var(--dark-red);
+    border: 5px solid var(--dark-red);
+    border-radius: 3px;
+
+    transition: all 0.3s;
+}
+
+.startButton:hover{ 
+    transform: translateY(-10px);
+    background-color: var(--dark-red);
+    color: var(--white);
+    border: 5px solid var(--dark-red);
+}
+
 @media (max-width: 800px){
     #aboutUs, #hearts,
     #whyUs, #clubs, 
     #callToAction, #diamond {
         grid-template-columns: 1fr;
     }
-    #welcomMessage {
+    #welcomeMessage {
         font-size: 2em; 
     }
 

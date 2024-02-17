@@ -1,10 +1,14 @@
-:root{
+:root {
   --mdc-theme-primary: #d3d3d3;
   --mdc-theme-on-primary: #000000;
+  --dark-grey: #a9a9a9;
+  --dark-red: #8b0000;
+  --white: #f5f5f5;
+  --gold: #ffd700;
 }
 
 header {
-  padding: 10px;
+  padding: 15px;
 }
 
 .center { 
@@ -15,15 +19,29 @@ header {
 
 .logo-width {
   width: 200px;
+  padding: 40px;
 }
 
+.center { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+}
+
+a {
+  margin: 40px;
+}
 
 #menu {
   display: none;
 }
 
 footer {
-  position: fixed;
+  position: static;
   bottom: 0px;
   width: 100vw;
   background-color: var(--mdc-theme-primary);
@@ -48,7 +66,6 @@ footer {
   #menu {
       display: initial;
   }
-
   #navLinks, 
   #loginIcon {
       display: none;

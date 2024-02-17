@@ -5,12 +5,13 @@
 }
 
 #hero-image {
-    height: 100vh;
+    height: 105vh;
     width: 100vw;
     position: absolute;
     filter: blur(5px);
     z-index: -1;
 }
+
 #body {
     position: absolute;
     top: 50%;
@@ -22,11 +23,13 @@
     max-width: 50%; 
     font: optional;
 }
+
 #rules {
     color: red;
 }
 
 h1 {
+    font-size: 2.5em;
     font-family: 'Chalkduster', sans-serif;
     text-align: center;
     font-weight: bold;

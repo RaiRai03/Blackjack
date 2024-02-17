@@ -4,35 +4,54 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X_UA_Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="reset.css"/>
-        <link rel="stylesheet" href="common.css"/>
+        <link rel="stylesheet" href="reset.css"/>  
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="shell.css">
         <title>About Blackjack</title>  
     </head>
     <body>
-        <header>
-            <img id="logo" src="./assets/blackjack-logo.png" alt="Blackjack Logo" height="120"/>
-            <nav class="disappearing"> 
-                <ul>
-                    <li><a href="./index.html">About</a></li>
-                    <li><a href="./table.html">Table</a></li>
-                    <li><a href="./rules.html">Rules</a></li>
-                </ul>
-            </nav>
-            <div id="account">
-                <button id="login">Login</button>
-            </div>
-            <div class="mobileFeature">
-                <button id="burgerOpen" >Burger</button>
-            </div>
+        <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div class="mdc-top-app-bar__row">
+    
+                <section class="logo-width mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                  <span class="mdc-top-app-bar__title"><img src="./assets/blackjack-logo.png" alt="Blackjack logo" height="120"/></span>
+                </section>
+    
+                <section id = "navLinks" class="center mdc-top-app-bar__section">
+                    <nav>
+                        <a href="./index.html">
+                            <button class="mdc-button ampler-padding">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label mdc-theme--on-primary">About</span>
+                            </button>
+                        </a>
+                        <a href="./rules.html">
+                            <button class="mdc-button ampler-padding">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label mdc-theme--on-primary">Rules</span>
+                            </button>
+                        </a>
+                        <a href="./table.html">
+                            <button class="mdc-button ampler-padding">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label mdc-theme--on-primary">Table</span>
+                            </button>
+                        </a>
+                    </nav>
+                </section>
+                <section class="logo-width mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                  <span id="loginIcon" class="material-icons">login</span>
+                  <span id="menu" class="material-icons">menu</span>
+                </section>
+              </div>
         </header>
-        <main>
+        <main class="mdc-top-app-bar--fixed-adjust footer--fixed mdc-layout-grid">
             <section id="hero">
-                <h1 id= "welcomMessage" data-text="Welcome to Blackjack...">Welcome to Blackjack...</h1>
-                <img id="hero-image" src="https://images.pexels.com/photos/4253888/pexels-photo-4253888.jpeg" alt="Black Playing Cards on Black Background" width="400" height="300"> 
+                <h1 id= "welcomeMessage" data-text="Welcome to Blackjack...">Welcome to Blackjack...</h1>
+                <img id="hero-image" src="./assets/blackjack-hero-image.jpg" alt="Black Playing Cards on Black Background" width="400" height="300"> 
             </section>
             <section id="aboutUs">
                 <div class="textContent"> 
@@ -68,7 +87,7 @@
                 <p>
                     We understand that many platforms can be a drain on your money, but here's the beauty of our blackjack game: it's absolutely free! Experience the thrill without the financial pressure, and hone your skills without any monetary constraints.
                 </p>
-                <button type="button">Start Playing</button>
+                <button type="button" class="startButton">Start Playing</button>
                 </div>
                 <div id="diamonds">
                     <img src="./assets/diamonds.png" alt="Diamonds">
@@ -76,5 +95,13 @@
             </section>
         </main>
         <footer><span id="copyright">&copy; Classy Development</span></footer>
+        <script src="shell.js"></script>
+        <script>document.addEventListener('DOMContentLoaded', (event) => {
+            const startButton = document.querySelector('.startButton');
+            
+            startButton.addEventListener('click', function() {
+              window.location.href = 'table.html';
+            });
+          });</script> 
     </body>
 </html>
