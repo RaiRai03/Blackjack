@@ -8,6 +8,7 @@
   justify-content: center; 
   position: relative;
 }
+
 #hero-image{
   width:100vw;
   height: 80vh;
@@ -16,7 +17,7 @@
 }
 
 
-h1 {
+#welcomMessage {
   position: absolute;
   color: transparent;
   text-align: center;
@@ -27,145 +28,153 @@ h1 {
   text-transform: uppercase;
   font-family: 'Impact', fantasy;
   font-weight: 900;
+  font-size: 40px;
+  margin: 20px;
 }
 
 
-h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1000%;
-  height: 100%;
-  color: darkgrey;
-  -webkit-text-stroke: 0vw rgb(112, 228, 112);
-  border-right: 3px solid yellow;
-  overflow: hidden;
-  animation: animate 10s linear infinite; 
-  white-space: nowrap;
+#welcomMessage::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 100%;
+    color: darkgrey;
+    -webkit-text-stroke: 0vw rgb(112, 228, 112);
+    border-right: 3px solid yellow;
+    overflow: hidden;
+    animation: animate 10s linear infinite; 
+    white-space: nowrap;
 }
 
 @keyframes animate
 {
-  0%, 10%, 100%
-  {
-      width: 0;  
-  }
-  70%, 90%
-  {
-      width: 100%
-  }
+    0%, 10%, 100%
+    {
+        width: 0;  
+    }
+    70%, 90%
+    {
+        width: 100%
+    }
 }
 
 h2 {
-  font-size: 2.5em;
-  font-family: 'Chalkduster', sans-serif;
-  text-align: center;
-  font-weight: bold;
-  margin: 40px;
-}
-#aboutUs{
-  height: 450px;
-  width:90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;  
-  gap: 20px;
-  font-family: 'Times New Roman', serif;
-  overflow: auto;
-}
-
-.textContent {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;  
-  align-items: center; 
-}
-#hearts {
-  display: flex;
-  align-items: center;  
-  justify-content: center; 
-}
-#quoteSection {
-  width: 100%vw;         
-  height: 200px;    
-  background-color: darkgrey;  
-  text-align: center;
-  margin: 20px auto;       
-  display: flex;           
-  align-items: center;    
-  justify-content: center; 
-  padding: 20px;        
-}
-
-#whyUs{
-  height: 450px;
-  width:90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;  
-  gap: 20px;
-  font-family: 'Times New Roman', serif;
-  justify-self: end;
-  overflow: auto;
-}
-#clubs {
-  display: flex;
-  align-items: center;  
-  justify-content: center; 
+    font-size: 2.5em;
+    font-family: 'Chalkduster', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin: 40px;
 }
 
 p {
-  font-size: 1.5em; 
-  grid-column: 1 / -1;
-  padding: 20px;
+    font-size: 1.5em; 
+    grid-column: 1 / -1;
+    padding: 20px;
 }
 
-blockquote{
-  font-size: 1.5em; 
-  max-width: 90%;          
-  font-style: italic;    
+.textContent {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center; 
 }
 
-#whatPeopleSay{
-  width: 100%vw;         
-  height: 400px;    
-  background-color: darkgrey;  
-  text-align: center;
-  margin: 20px auto;       
-  display: flex;              
-  justify-content: center; 
-  padding: 20px;   
+#aboutUs{
+    height: 450px;
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;  
+    gap: 20px;
+    font-family: 'PT Serif', serif;
+    overflow: auto;
 }
 
-#whatPeopleSayHeading {
-  font-family: 'Times New Roman', serif;
+#hearts {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+}
+
+#whyUs{
+    height: 450px;
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;  
+    gap: 20px;
+    font-family: 'PT Serif', serif;
+    justify-self: end;
+    overflow: auto;
+}
+
+#clubs {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
 }
 
 #callToAction {
-  height: 450px;
-  width:90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;  
-  gap: 20px;
-  font-family: 'Times New Roman', serif;
-  overflow: auto;
+    height: 450px;
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;  
+    gap: 20px;
+    font-family: 'PT Serif', serif;
+    overflow: auto;
 }
 
 #diamonds{
-  display: flex;
-  align-items: center;  
-  justify-content: center; 
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+}
+
+#quoteSection {
+    width: 100%vw;         
+    height: 200px;    
+    background-color: darkgrey;  
+    text-align: center;
+    margin: 20px auto;       
+    display: flex;           
+    align-items: center;    
+    justify-content: center; 
+    padding: 20px;        
+}
+
+blockquote{
+    font-size: 1.5em; 
+    max-width: 90%;          
+    font-style: italic; 
+    font-family: 'PT Serif', serif;   
+}
+
+#whatPeopleSay{
+    width: 100%vw;         
+    height: 400px;    
+    background-color: darkgrey;  
+    text-align: center;
+    margin: 20px auto;       
+    display: flex;              
+    justify-content: center; 
+    padding: 20px;   
+}
+
+#whatPeopleSayHeading {
+    font-family: 'Times New Roman', serif;
 }
 
 @media (max-width: 800px){
-  #aboutUs, #hearts,
-  #whyUs, #clubs, 
-  #callToAction, #diamond {
-      grid-template-columns: 1fr;
-  }
-  h1 {
-      font-size: 2em; 
-  }
+    #aboutUs, #hearts,
+    #whyUs, #clubs, 
+    #callToAction, #diamond {
+        grid-template-columns: 1fr;
+    }
+    #welcomMessage {
+        font-size: 2em; 
+    }
+
 }
