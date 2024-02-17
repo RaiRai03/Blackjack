@@ -1,30 +1,34 @@
-//___________________________________________________________________
-const hitButton = document.querySelector("#hit-button");
-hitButton.addEventListener('click', clickButton);
+const suits = ["♠", "♡", "♢", "♣"];
+const ranks = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Knave", "Queen", "King"];
 
-function clickButton() {
-    const randomCard = getRandomCard(getDeck());
-    console.log(`Your card is ${randomCard.rank} of ${randomCard.suit}. Did you bust?`);
+const deck = [];
+for (const suit of suits) {
+  for (const rank of ranks) {
+    deck.push({
+      suit, 
+      rank,
+    });
+  }
 }
 
 function getDeck() {
-    const deck = []
-    const suits = ["♠", "♡", "♢", "♣"];
-    const ranks = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "Knave", "Queen", "King"];
-    for(const suit of suits) {
-        for(const rank of ranks) {
-            deck.push({suit, rank});
-        }
-    }
-    return deck;
+  return deck;
+}
+function getRandomCard() {
+  return deck[Math.floor(Math.random() * deck.length)];
+}
+function dealRandomCard() {
+  dealToDisplay(getRandomCard());
 }
 
-function getRandomCard(deck) {
-    const randomIndex = Math.floor(Math.random() * deck.length);
-    return deck[randomIndex];
-}
-
-window.getRandomCard = getRandomCard;
+const hitButton = document.querySelector("#hit-button");
+hitButton.addEventListener("click", () => {
+  const randomCard = getRandomCard();
+  console.log(
+    `Your card is ${randomCard.rank} of ${randomCard.suit}. Did you bust?`
+  );
+  console.log(randomCard);
+});
 //___________________________________________________________________
 
 // const hitButton = document.querySelector("#hit-button");

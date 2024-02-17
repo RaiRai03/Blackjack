@@ -57,7 +57,7 @@
                     <h2>Player's Cards:</h2>
                     <div class="mdc-card__ripple"></div>
                 </div>
-                <ol id="my-list" class="mdc-list" role="listbox">
+                <ol id="player-list" class="mdc-list" role="listbox">
                     <li class="mdc-list-item space-between" role="option" tabindex="0"> 
                       <span class="mdc-list-item__ripple"></span>
                       <span class="mdc-list-item__text"><img src="./assets/queen.png" alt="Queen of Clubs" height="100px">Queen of Clubs</span>
@@ -91,7 +91,7 @@
                     <h2>Dealer's Cards:</h2>
                     <div class="mdc-card__ripple"></div>
                 </div>
-                <ol id="my-list" class="mdc-list" role="listbox">
+                <ol id="dealer-list" class="mdc-list" role="listbox">
                     <li class="mdc-list-item space-between" role="option" tabindex="0">
                       <span class="mdc-list-item__ripple"></span>
                       <span class="mdc-list-item__text"><img src="./assets/king.png" alt="King of Clubs" height="100px">King of Clubs</span>
@@ -127,27 +127,35 @@
                     <div class="mdc-card__ripple"></div>
                 </div>
                 <div class="flex-center mdc-card__actions--full-bleed">
-                  <button class="mdc-button mdc-card__action mdc-card__action--button" id="hit-button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Hit</span>
-                <button class="mdc-button mdc-card__action mdc-card__action--button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Stand</span>
-                <button class="mdc-button mdc-card__action mdc-card__action--button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Split</span>
-                <button class="mdc-button mdc-card__action mdc-card__action--button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Double</span>
-                <button class="mdc-button mdc-card__action mdc-card__action--button">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Insure</span> 
-            </div>
-        </section>
-    </div>
-</main>
-<footer><span id="copyright">&copy; Classy Development</span></footer>
-<script src="shell.js"></script>
-<script  type="module" src="table.js"></script>
+ <!-- <button class="mdc-button mdc-card__action mdc-card__action--button" id="hit-button">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Hit</span>
+                    </button> -->
+                    <button class="mdc-button mdc-card--raised" data-user-hints="Take another card" id="hit-button">
+                      <span class="mdc-button__label">Hit</span>
+                  </button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">Stand</span>
+                  </button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">Split</span>
+                  </button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">Double</span>
+                  </button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button">
+                      <div class="mdc-button__ripple"></div>
+                      <span class="mdc-button__label">Insure</span> 
+                  </button>
+              </div>
+          </section>
+      </div>
+  </main>
+  <footer><span id="copyright">&copy; Classy Development</span></footer>
+  <script src="./shell.js"></script>
+  <script src="./table.js"></script>
 </body>
 </html>
