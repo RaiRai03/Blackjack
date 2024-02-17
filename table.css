@@ -1,0 +1,78 @@
+body {
+  font-family: 'Times New Roman', serif;
+  color: var(--white);
+  background-color: black;
+}
+
+h2, h3 {
+  font-weight: bold;
+  margin: 40px;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2.1em;
+}
+
+.content {
+  color: var(--white);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;  
+  align-items: center;
+  margin: 20px; 
+}
+
+.playerActionContent {
+  display: flex;
+  flex-direction: column; 
+}
+
+ol {
+  display: flex;
+}
+
+ol > li {
+  padding: 20px;
+}
+
+ol > li:hover::after {
+  content: attr(data-blackjack-value);
+  margin: 10px;
+}
+button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5em 1.5em;
+  margin: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 3px;
+
+  transition: all 0.3s;
+}
+button:hover{ 
+  transform: translateY(-10px);
+  background-color: var(--gold);
+  color: var(--black);
+  border: 1px solid var(--gold);
+}
+button::after{ /* Change it to .actionButton after passing*/
+  content: attr(data-user-hints); 
+  display: none;
+  position: absolute;
+  left: 100%; 
+  color: var(--white);
+  white-space: nowrap; 
+  width: 0;
+  font-size: 0.8em;
+  margin-left: 15px; 
+}
+button:hover::after { 
+  content: attr(data-user-hints);/* remove after passing */
+  display: block;
+}
+

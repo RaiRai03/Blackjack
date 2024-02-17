@@ -29,50 +29,35 @@
         </div>
     </header>
     <main>
-        <section id="hero">
-            <h1>Blackjack Table</h1>
-            <img id="hero-image" src="https://images.pexels.com/photos/6664128/pexels-photo-6664128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Man Displaying Cards in Casino" width="500" height="350"> 
-            <p>
-                Welcome to the Blackjack Table! Face off against a dealer in this classic card game.
-                Aim for a total close to 21, but don't go over! Choose to 'Hit' for another card,
-                'Stand' to keep your total, or 'Split' identical cards into two hands.
-                Dive in and test your luck!
-            </p> 
-        </section>
-        <section>
+        <section class="content">
             <h2>Player's Cards:</h2>
             <ol>
-                <li>A♠</li>
-                <li>10♥</li>
-                <li>7♦</li>
+                <li data-blackjack-value="10">Queen<img src="./assets/queen.png" alt="Queen of Clubs" height="100px"></li>
+                <li data-blackjack-value="A&clubs;"><img src="./assets/ace.png" alt="Ace of Clubs" height="100px"></li>
+                <li data-blackjack-value="10&clubs;"><img src="./assets/ten.png" alt="Ten of Clubs" height="100px"></li>
+                <li data-blackjack-value="7&clubs;"><img src="./assets/seven.png" alt="Seven of Clubs" height="100px"></li>
+                <li data-blackjack-value="JOKER"><img src="./assets/joker.png" alt="Joker" height="100px"></li>
             </ol>
         </section>
-        <section>
+        <section class="content">
             <h2>Dealer's Cards:</h2>
             <ol>
-                <li>K♣</li>
-                <li>3♠</li>
-                <li>Q♥</li>
+                <li data-blackjack-value="K&clubs;"><img src="./assets/king.png" alt="King of Clubs" height="100px"></li>
+                <li data-blackjack-value="3&clubs;"><img src="./assets/three.png" alt="Three of Clubs" height="100px"></li>
+                <li data-blackjack-value="5&clubs;"><img src="./assets/five.png" alt="Five of Clubs" height="100px"></li>
+                <li data-blackjack-value="?"><img src="./assets/unknown.png" alt="Unknown" height="100px"></li>
+                <li data-blackjack-value="?"><img src="./assets/unknown.png" alt="Unknown" height="100px"></li>
             </ol>
         </section>
-        <section>
-            <h3>Gameplay Options:</h3>
-            <dl>
-                <dt>Hit</dt>
-                <dd>Request another card to try and bring the total to 21 or as close as possible without exceeding 21.</dd>
-                
-                <dt>Stand</dt>
-                <dd>Keep your current total and end your turn.</dd>
-    
-                <dt>Split</dt>
-                <dd>If you have two cards of the same rank, divide them into two hands, each with its own bet.</dd>
-            </dl>
-        </section>
-        <section>
+        <section class="content">
             <h3>Player's Actions:</h3>
-            <button type="button" disabled>Hit</button>
-            <button type="button">Stand</button>
-            <button type="button">Split</button>
+            <div  class="playerActionContent">
+                <button type="button" class="actionButton" data-user-hints="Request another Card.">Hit</button>
+                <button type="button" class="actionButton" data-user-hints="End your turn.">Stand</button>
+                <button type="button" class="actionButton" data-user-hints="Bet against dealer's Blackjack.">Insurance</button>
+                <button type="button" class="actionButton" data-user-hints="Divide matching cards.">Split</button>
+                <button type="button" class="actionButton" data-user-hints="Double your bet.">Double</button>
+            </div>
         </section>
     </main>
     <footer><span id="copyright">&copy; Classy Development</span></footer>
