@@ -1,80 +1,51 @@
-const MDCTextField = mdc.textField.MDCTextField;
-const textFields = [].map.call(
-  document.querySelectorAll(".mdc-text-field"),
-  function (el) {
-    return new MDCTextField(el);
-  }
-);
+const signUpButton = document.querySelector("#btn-sign-up");
+signUpButton.addEventListener('click', validate);
 
-const MDCCheckbox = mdc.checkbox.MDCCheckbox;
-const checkboxes = [].map.call(
-  document.querySelectorAll(".mdc-checkbox"),
-  function (el) {
-    return new MDCCheckbox(el);
-  }
-);
-console.log(document.forms[0]);
-const myForm = document.forms[0];
-const signUpButton = myForm[8];
-const [
-  fullNameInput,
-  usernameInput,
-  enterPasswordInput,
-  confirmPasswordInput,
-  ageInput,
-  birthDateInput,
-  legalCheckbox,
-  termsCheckbox,
-] = myForm;
-console.dir(signUpButton);
-function validateEligibility(event) {
-  event.preventDefault();
-  //extract the current values
-  const fullNameValue = fullNameInput.value;
-  const usernameValue = usernameInput.value;
-  const enterPasswordValue = enterPasswordInput.value;
-  const confirmPasswordValue = confirmPasswordInput.value;
-  const ageValue = ageInput.value;
-  const birthDateValue = birthDateInput.value;
-  const legalValue = legalCheckbox.checked;
-  const termsValue = termsCheckbox.checked;
-  console.log(legalValue, termsValue);
-  //log current values
-  console.log(`Full Name: ${fullNameValue}`);
-  console.log(`Username: ${usernameValue}`);
-  console.log(`Enter Password: ${enterPasswordValue}`);
-  console.log(`Confirm Password: ${confirmPasswordValue}`);
-  console.log(`Age: ${ageValue}`);
-  console.log(`Birth Date: ${birthDateValue}`);
-  //log checkbox values
-  if (legalValue) {
-    console.log("The user has checked the legal checkbox");
-  } else {
-    console.log("The user has not checked the legal checkbox");
-  }
-  if (termsValue) {
-    console.log("The user has checked the terms checkbox");
-  } else {
-    console.log("The user has not checked the terms checkbox");
-  }
-  //all validations
-  const bothCheckboxes = legalValue && termsValue;
-  const isOfAge = ageValue >= 13;
-  function isNotEmpty(str) {
-    return str !== "";
-  }
-  const noEmptyFields =
-    isNotEmpty(fullNameValue) &&
-    isNotEmpty(usernameValue) &&
-    isNotEmpty(enterPasswordValue) &&
-    isNotEmpty(confirmPasswordValue) &&
-    isNotEmpty(ageValue) &&
-    isNotEmpty(birthDateValue);
-  const passwordsMatch = enterPasswordValue === confirmPasswordValue;
-  if (passwordsMatch && bothCheckboxes && isOfAge && noEmptyFields) {
-    console.log("The user is eligible");
-  } else {
-    console.log("The user is ineligible");
-  }
+function validate() {
+    const elements = {
+        fullName: document.querySelector("#full-name-input"),
+        username: document.querySelector("#username-input"),
+        age: document.querySelector("#age-input"),
+        birthDate: document.querySelector("#birth-date-input"),
+        password: document.querySelector("#password-input"),
+        confirmPassword: document.querySelector("#confirm-password-input"),
+        legalCheckbox: document.querySelector("#legal-checkbox"),
+        termsCheckbox: document.querySelector("#terms-checkbox")
+    };
+
+    console.log(`Full Name: ${elements.fullName.value}`);
+    console.log(`Username: ${elements.username.value}`);
+    console.log(`Age: ${elements.age.value}`);
+    console.log(`Birth Date: ${elements.birthDate.value}`);
+    console.log(`Password: ${elements.password.value}`);
+    console.log(`Confirm Password: ${elements.confirmPassword.value}`);
+
+    if (elements.legalCheckbox.checked) {
+        console.log("The user has checked the legal checkbox");
+    } else {
+        console.log("The user has not checked the legal checkbox");
+    }
+
+    if (elements.termsCheckbox.checked) {
+        console.log("The user has checked the terms checkbox");
+    } else {
+        console.log("The user has not checked the terms checkbox");
+    }
+
+    if (
+        elements.password.value === elements.confirmPassword.value &&
+        parseInt(elements.age.value, 10) >= 13 &&
+        elements.legalCheckbox.checked &&
+        elements.termsCheckbox.checked &&
+        elements.fullName.value &&
+        elements.username.value &&
+        elements.age.value &&
+        elements.birthDate.value &&
+        elements.password.value &&
+        elements.confirmPassword.value
+    ) {
+        console.log("The user is eligible");
+    } else {
+        console.log("The user is ineligible");
+    }
 }
-signUpButton.addEventListener("click", validateEligibility);
