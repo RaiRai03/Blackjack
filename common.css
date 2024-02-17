@@ -27,7 +27,7 @@ header {
   
   footer {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100vw;
     background-color: crimson;
     height: 80px;
@@ -50,10 +50,12 @@ header {
    li {
      display: inline;
      margin: 20px;
+
    }
-  
+
    .mobileFeature {
-    display: flex;
+       display: flex;
    }
+   
   }
   
