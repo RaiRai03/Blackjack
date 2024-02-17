@@ -1,61 +1,97 @@
+
 header {
-    position: fixed;
-    top: 0px;
-    width: 100vw;
-    height: 100px;
-    background-color: crimson;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  
-  main {
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-  
-  li {
-    display: inline;
-    margin: 50px;
-  }
-  
-  footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    background-color: crimson;
-    height: 80px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  #copyright {
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-  }
-  
+  background-color: rgb(211, 211, 211);
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100px;
+  z-index: 20;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+img#logo{
+    position: static;
+    justify-self: center;   
+}
+
+nav {
+  left: 250px; 
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  font-family: serif;
+  font-size: 1.1em;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 80px; 
+}
+
+#account {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100px;
+  width: 200px;
+  background-color: lightgrey;
+}
+
+#login {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+}  
+
+main {
+  padding: 100px 0px 81px;
+}
+
+footer {
+  background-color: lightgrey;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#copyright {margin: 20px;
+  color: black;
+}
+
+@media (min-width: 801px){
   .mobileFeature {
-    display: none;
+      display: none;
   }
-  
-  @media (max-width: 500px) {
-   li {
-     display: inline;
-     margin: 20px;
+}
 
-   }
-
-   .mobileFeature {
-       display: flex;
-   }
-   
+@media (max-width: 800px) {
+  .disappearing, #account { /*Change it to nav or ask about it*/
+      display: none; 
   }
-  
+  .mobileFeature {
+      grid-column: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  footer {
+      position: unset;
+  }
+  main {
+      padding-bottom: 0px;
+  }
+}

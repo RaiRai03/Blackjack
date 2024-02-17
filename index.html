@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="common.css" />
-    <link rel="stylesheet" href="about.css" />
-    <title>Blackjack</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#"> About </a></li>
-          <li><a href="./table.html"> Table</a></li>
-          <li><a href="./rules.html"> Rules</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="hero"><h1>Play the Blackjack with Us</h1></section>
-      <section id="whyUs">
-        <p class="disappearing">
-          Why Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Dignissimos eos ut accusamus praesentium placeat. Suscipit assumenda
-          obcaecati molestias, accusamus beatae, porro expedita reprehenderit
-          fugiat quos quaerat doloremque eveniet doloribus nesciunt.
-        </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X_UA_Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="common.css"/>
+        <link rel="stylesheet" href="about.css">
+        <title>About Blackjack</title>  
+    </head>
+    <body>
+        <header>
+          <img id="logo" src="./assets/blackjack-logo.png" alt="Blackjack Logo" height="120"/>
+          <nav class="disappearing"> 
+              <ul>
+                  <li><a href="./index.html">About</a></li>
+                  <li><a href="./table.html">Table</a></li>
+                  <li><a href="./rules.html">Rules</a></li>
+              </ul>
+          </nav>
+          <div id="account">
+              <button id="login">Login</button>
+          </div>
+          <div class="mobileFeature">
+              <button id="burgerOpen" >Burger</button>
+          </div>
+      </header>
+      <main>
+          <section id="hero">
+            <h1 data-text="Welcome to Blackjack...">Welcome to Blackjack...</h1>
+            <img id="hero-image" src="https://images.pexels.com/photos/4253888/pexels-photo-4253888.jpeg" alt="Black Playing Cards on Black Background" width="400" height="300"> 
+        </section>
+        <section id="aboutUs">
+          <div class="textContent"> 
+              <h2>About Blackjack</h2>
+              <p>Blackjack is one of the most popular card games in the world. The objective is simple: get a hand closer to 21 than the dealer's hand without exceeding 21. It's a game of skill, strategy, and luck, offering endless challenges and excitement.</p>
+          </div>
+          <div id="hearts">
+              <img src="./assets/hearts.png" alt="Hearts">
+          </div>
       </section>
-      <section id="callToAction">
+      <section id="quoteSection">
+          <blockquote>
+              "Blackjack is the only casino game an amateur can learn to play and at which he can definitely win." - Lawrence Revere
+          </blockquote>
+        </section>
+        <section id="whyUs">
+            <div id="clubs">
+                <img src="./assets/clubs.png" alt="Clubs">
+            </div>
+            <div class="textContent"> 
+                <h2>Why Us? </h2>
+                <p>
+                    With a multitude of options available... Why choose us for your blackjack experience? Our platform boasts a user-friendly interface, real-time interaction, and expert guidance to enhance your gaming. We prioritize transparency and fairness, ensuring you have a genuine blackjack experience. Dive into the world of blackjack with confidence, knowing you're with the best.
+                </p>
+            </div>
+        </section>
+        <section id="whatPeopleSay">
+            <h2 id="whatPeopleSayHeading">What People Say</h2>
+        </section>
+        <section id="callToAction">
+          <div class="textContent">
+            <h2>Play for Free, Play for Fun!</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, doloribus
-          omnis! Nam, quaerat. Magnam maiores aliquid voluptatibus sed
-          repellendus, assumenda suscipit repellat, necessitatibus corrupti
-          dolorem velit facilis in a placeat. Money Lorem ipsum dolor sit,
-          ametconsectetur adipisicing elit. Facere exercitationem necessitatibus
-          magni eos molestias. Cumque consectetur animi consequuntur maiores
-          magnam aliquid quos eos hic sunt, commodi totam Money perferendis rem
-          laboriosam.
+            We understand that many platforms can be a drain on your money, but here's the beauty of our blackjack game: it's absolutely free! Experience the thrill without the financial pressure, and hone your skills without any monetary constraints.
         </p>
-        <button>Start Playing</button>
-      </section>
-    </main>
-    <footer>
-      <span id="copyright"> &copy; Classy Development </span>
-      <a href="#" class="mobileFeature"> Download the App!  </span>
-    </footer>
-  </body>
+        <button type="button">Start Playing</button>
+        </div>
+        <div id="diamonds">
+            <img src="./assets/diamonds.png" alt="Diamonds">
+        </div>
+    </section>
+</main>
+<footer><span id="copyright">&copy; Classy Development</span></footer>
+</body>
 </html>
+
