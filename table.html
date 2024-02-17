@@ -55,8 +55,9 @@
             <section id ="playersCards" class="mdc-layout-grid__cell--span-6 mdc-card give-height">
                 <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
                     <h2>Player's Cards:</h2>
+                    <div class="mdc-card__ripple"></div>
                 </div>
-                <ol id="player-list" class="mdc-list" role="listbox">
+                <ol id="my-list" class="mdc-list" role="listbox">
                     <li class="mdc-list-item space-between" role="option" tabindex="0"> 
                       <span class="mdc-list-item__ripple"></span>
                       <span class="mdc-list-item__text"><img src="./assets/queen.png" alt="Queen of Clubs" height="100px">Queen of Clubs</span>
@@ -88,8 +89,9 @@
             <section id ="dealersCards" class="mdc-layout-grid__cell--span-6 mdc-card">
                 <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
                     <h2>Dealer's Cards:</h2>
+                    <div class="mdc-card__ripple"></div>
                 </div>
-                <ol id="dealer-list" class="mdc-list" role="listbox">
+                <ol id="my-list" class="mdc-list" role="listbox">
                     <li class="mdc-list-item space-between" role="option" tabindex="0">
                       <span class="mdc-list-item__ripple"></span>
                       <span class="mdc-list-item__text"><img src="./assets/king.png" alt="King of Clubs" height="100px">King of Clubs</span>
@@ -118,66 +120,34 @@
                 </ol>
             </section>
         </div>
-        <section id="playersActions" class="mdc-layout-grid__cell--span-12 mdc-card flex-center flex-column">
-            <h3 class="ampler-padding heading">Player's Actions</h3>
-            <div class="flex-center space-evenly ampler-padding take-width">
-              <button
-                class="mdc-button mdc-button--raised"
-                data-user-hints="Take another card"
-                id="hit-button"
-              >
-                <span class="mdc-button__label">Hit</span>
-              </button>
-              <button
-                class="mdc-button mdc-button--raised"
-                data-user-hints="Don't take any more cards (This is better the closer you are to 21)"
-              >
-                <span class="mdc-button__label">Stand</span>
-              </button>
-              <button
-                class="mdc-button mdc-button--raised"
-                data-user-hints="Split two cards of the same denomination into two different hands, for twice the imaginary price"
-              >
-                <span class="mdc-button__label">Split</span>
-              </button>
-              <button
-                class="mdc-button mdc-button--raised"
-                data-user-hints="When the dealer shows an ace, bet their hand will be blackjack (This isn't really a great option for the player)"
-              >
-                <span class="mdc-button__label">Insure</span>
-              </button>
+        <div class="flex-center ampler-padding conatiner mdc-layout-grid__inner">
+            <section id= "playersActions" class="mdc-layout-grid__cell--span-6 mdc-card mdc-card--outlined give-width">
+                <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
+                    <h3>Player's Actions:</h3>
+                    <div class="mdc-card__ripple"></div>
+                </div>
+                <div class="flex-center mdc-card__actions--full-bleed">
+                  <button class="mdc-button mdc-card__action mdc-card__action--button" id="hit-button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Hit</span>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Stand</span>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Split</span>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Double</span>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Insure</span> 
             </div>
-          </section>
-          <section
-            id="betting"
-            class="mdc-layout-grid__cell--span-12 mdc-card flex-center"
-          >
-            <form
-              id="wager-form"
-              class="ampler-padding flex-center space-evenly take-width"
-            >
-              <span id="player-bankroll">Bankroll: $2022</span>
-              <label class="mdc-text-field mdc-text-field--filled wager-input">
-                <span class="mdc-text-field__ripple"></span>
-                <span class="mdc-floating-label ampler-padding" id="wager-label"
-                  >Wager Amount</span
-                >
-                <input
-                  class="mdc-text-field__input"
-                  type="number"
-                  aria-labelledby="wager-label"
-                />
-                <span class="mdc-line-ripple"></span>
-              </label>
-              <button class="mdc-button mdc-button--raised">
-                <span class="mdc-button__label">Wager</span>
-              </button>
-            </form>
-          </section>
-      </main>
-      <footer><span id="copyright">&copy; Classy Development</span></footer>
-      <script src="./shell.js"></script>
-      <script src="./table.js"></script>
-    </body>
-    </html>
-      
+        </section>
+    </div>
+</main>
+<footer><span id="copyright">&copy; Classy Development</span></footer>
+<script src="shell.js"></script>
+<script  type="module" src="table.js"></script>
+</body>
+</html>
