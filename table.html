@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="reset.css"/>  
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -51,111 +48,100 @@
           </div>
     </header>
     <main class="mdc-top-app-bar--fixed-adjust footer--fixed mdc-layout-grid">
-        <div class="ampler-padding conatiner mdc-layout-grid__inner">
+        <div class="ampler-padding conatiner mdc-layout-grid__inner main-container">
             <section id ="playersCards" class="mdc-layout-grid__cell--span-6 mdc-card give-height">
                 <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
                     <h2>Player's Cards:</h2>
-                    <div class="mdc-card__ripple"></div>
                 </div>
                 <ol id="player-list" class="mdc-list" role="listbox">
-                    <li class="mdc-list-item space-between" role="option" tabindex="0"> 
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/queen.png" alt="Queen of Clubs" height="100px">Queen of Clubs</span>
-                      <span>Q&clubs;</span>
-                    </li>
-                    <li class="mdc-list-item space-between" role="option">
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/ace.png" alt="Ace of Clubs" height="100px">Ace of Clubs</span>
-                      <span>A&clubs;</span>
-                    </li>
-                    <li class="mdc-list-item space-between" role="option">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__text"><img src="./assets/ten.png" alt="Ten of Clubs" height="100px">Ten of Clubs</span>
-                        <span>10&clubs;</span>
-                      </li>
-                      <li class="mdc-list-item space-between" role="option">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__text"><img src="./assets/seven.png" alt="Seven of Clubs" height="100px">Seven of Clubs</span>
-                        <span>7&clubs;</span>
-                      </li>
-                    <li class="mdc-list-item space-between" role="option">
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/joker.png" alt="Joker" height="100px">Joker</span>
-                      <span>JOKER</span>
-                    </li>
-                    <div id="card-display"></div>
+                  <li data-blackjack-value="10" class="mdc-list-item space-between"> 
+                    <span class="mdc-list-item__ripple"></span> 
+                    <span class="mdc-list-item__text">Ten of Diamonds</span>
+                  </li>
+                  <li data-blackjack-value="10" class="mdc-list-item space-between">
+                    <span class="mdc-list-item__ripple"></span> 
+                    <span class="mdc-list-item__text">Queen of Clubs</span>
+                  </li>
+                  <div id="card-display"></div>
                 </ol>
             </section>
             <section id ="dealersCards" class="mdc-layout-grid__cell--span-6 mdc-card">
                 <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
                     <h2>Dealer's Cards:</h2>
-                    <div class="mdc-card__ripple"></div>
                 </div>
                 <ol id="dealer-list" class="mdc-list" role="listbox">
-                    <li class="mdc-list-item space-between" role="option" tabindex="0">
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/king.png" alt="King of Clubs" height="100px">King of Clubs</span>
-                      <span>K&clubs;</span>
+                    <li data-blackjack-value="?" class="mdc-list-item space-between"> 
+                      <span class="mdc-list-item__ripple"></span> 
+                      <span class="mdc-list-item__text">Face Down of Mystery</span>
                     </li>
-                    <li class="mdc-list-item space-between" role="option">
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/three.png" alt="Three of Clubs" height="100px">Three of Clubs</span>
-                      <span>3&clubs;</span>
-                    </li>
-                    <li class="mdc-list-item space-between" role="option">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__text"><img src="./assets/five.png" alt="Five of Clubs" height="100px">Five of Clubs</span>
-                        <span>5&clubs;</span>
-                      </li>
-                      <li class="mdc-list-item space-between" role="option">
-                        <span class="mdc-list-item__ripple"></span>
-                        <span class="mdc-list-item__text"><img src="./assets/unknown.png" alt="Unknown" height="100px">Face Down</span>
-                        <span>?</span>
-                      </li>
-                    <li class="mdc-list-item space-between" role="option">
-                      <span class="mdc-list-item__ripple"></span>
-                      <span class="mdc-list-item__text"><img src="./assets/unknown.png" alt="Unknown" height="100px">Face Down</span>
-                      <span>?</span>
+                    <li data-blackjack-value="6" class="mdc-list-item space-between">
+                      <span class="mdc-list-item__ripple"></span> 
+                      <span class="mdc-list-item__text">Six of Clubs</span>
                     </li>
                 </ol>
             </section>
         </div>
-        <div class="flex-center ampler-padding conatiner mdc-layout-grid__inner">
-            <section id= "playersActions" class="mdc-layout-grid__cell--span-6 mdc-card mdc-card--outlined give-width">
-                <div class="heading flex-center ampler-padding mdc-card__primary-action" tabindex="0">
-                    <h3>Player's Actions:</h3>
-                    <div class="mdc-card__ripple"></div>
-                </div>
-                <div class="flex-center mdc-card__actions--full-bleed">
- <!-- <button class="mdc-button mdc-card__action mdc-card__action--button" id="hit-button">
-                        <div class="mdc-button__ripple"></div>
-                        <span class="mdc-button__label">Hit</span>
-                    </button> -->
-                    <button class="mdc-button mdc-card--raised" data-user-hints="Take another card" id="hit-button">
-                      <span class="mdc-button__label">Hit</span>
-                  </button>
-                  <button class="mdc-button mdc-card__action mdc-card__action--button">
-                      <div class="mdc-button__ripple"></div>
-                      <span class="mdc-button__label">Stand</span>
-                  </button>
-                  <button class="mdc-button mdc-card__action mdc-card__action--button">
-                      <div class="mdc-button__ripple"></div>
-                      <span class="mdc-button__label">Split</span>
-                  </button>
-                  <button class="mdc-button mdc-card__action mdc-card__action--button">
-                      <div class="mdc-button__ripple"></div>
-                      <span class="mdc-button__label">Double</span>
-                  </button>
-                  <button class="mdc-button mdc-card__action mdc-card__action--button">
-                      <div class="mdc-button__ripple"></div>
-                      <span class="mdc-button__label">Insure</span> 
-                  </button>
-              </div>
-          </section>
-      </div>
-  </main>
-  <footer><span id="copyright">&copy; Classy Development</span></footer>
-  <script src="./shell.js"></script>
-  <script src="./table.js"></script>
+        <section id="playersActions" class="mdc-layout-grid__cell--span-12 mdc-card flex-center flex-column hidden">
+          <h3 class="ampler-padding heading">Player's Actions</h3>
+          <div class="flex-center space-evenly ampler-padding take-width">
+            <button
+              class="mdc-button mdc-button--raised"
+              data-user-hints="Take another card"
+              id="hit-button"
+            >
+              <span class="mdc-button__label">Hit</span>
+            </button>
+            <button
+              class="mdc-button mdc-button--raised"
+              data-user-hints="Don't take any more cards (This is better the closer you are to 21)"
+              id = "stand-button">
+              <span class="mdc-button__label">Stand</span>
+            </button>
+            <button
+              class="mdc-button mdc-button--raised"
+              data-user-hints="Split two cards of the same denomination into two different hands, for twice the imaginary price"
+            >
+              <span class="mdc-button__label">Split</span>
+            </button>
+            <button
+              class="mdc-button mdc-button--raised"
+              data-user-hints="When the dealer shows an ace, bet their hand will be blackjack (This isn't really a great option for the player)"
+            >
+              <span class="mdc-button__label">Insure</span>
+            </button>
+          </div>
+        </section>
+        <section
+          id="betting"
+          class="mdc-layout-grid__cell--span-12 mdc-card flex-center"
+        >
+          <form
+            id="wager-form"
+            class="ampler-padding flex-center space-evenly take-width"
+          >
+            <span id="player-bankroll">Bankroll: $2022</span>
+            <label class="mdc-text-field mdc-text-field--filled wager-input">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label ampler-padding" id="wager-label"
+                >Wager Amount</span
+              >
+              <input
+                class="mdc-text-field__input"
+                type="number"
+                aria-labelledby="wager-label"
+                min="2"
+                value="2"
+              />
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <button class="mdc-button mdc-button--raised">
+              <span class="mdc-button__label">Wager</span>
+            </button>
+          </form>
+        </section>
+    </main>
+    <footer><span id="copyright">&copy; Classy Development</span></footer>
+    <script src="./shell.js"></script>
+    <script src="./table.js"></script>
 </body>
 </html>

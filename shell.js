@@ -11,3 +11,11 @@ const foos = [].map.call(
     return new MDCTextField(el);
   }
 );
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const loginIcon = document.querySelector('#loginIcon');
+
+  loginIcon.addEventListener('click', function() {
+    window.location.href = 'eligibility.html';
+  });
+});

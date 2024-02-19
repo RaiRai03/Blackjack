@@ -17,7 +17,7 @@ function validate() {
     console.log(`Username: ${elements.username.value}`);
     console.log(`Age: ${elements.age.value}`);
     console.log(`Birth Date: ${elements.birthDate.value}`);
-    console.log(`Enter Password: ${elements.password.value}`);
+    console.log(`Password: ${elements.password.value}`);
     console.log(`Confirm Password: ${elements.confirmPassword.value}`);
 
     if (elements.legalCheckbox.checked) {
